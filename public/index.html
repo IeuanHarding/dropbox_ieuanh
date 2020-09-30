@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ieuan's dropbox</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../stylesheet.css" />
+</head>
+
+<body>
+    <section>
+        <h1>Dropbox</h1>
+    </section>
+    <section>
+        <div>
+            <p>Drop your things into the box.</p>
+        </div>
+        <div>
+            <form ref='uploadForm' id='uploadForm' action="/upload" method='post' encType="multipart/form-data">
+                <input type="file" name="fileU" />
+                <input type='submit' value='upload' />
+            </form>
+        </div>
+        <div>
+            <span>Download:</span>
+            <div>
+                <select name="down-select" id="down-select">
+                    <option value="default">Please Select Your File</option>
+                </select>
+                <button id="download_button">Download</button>
+                <button id="refresh_button">Refresh</button>
+
+            </div>
+        </div>
+        <div>Files Present:</div>
+        <div id="download_section">
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../assets.js" type="module"></script>
+
+</body>
+
+</html>
